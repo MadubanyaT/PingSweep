@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Pinging a set of IP subnet, checking whether they are online or not.
+# Pinging a set of IP subnets, checking whether they are online or not.
 
 echo
 echo 'To fully utilise this tool, enter the subnet in this format (IP4): 192.168.#.# or 192.168.1.# '
@@ -11,9 +11,7 @@ CHECK=$(echo $SUBNET | cut -d'.' -f'3,4')
 
 
 # method for: 192.168.#.#
-
 function subnetting_16 {
-	
 	echo
 	NEW_SUB=$(echo $SUBNET | cut -d'.' -f"1,2")
 	
@@ -38,9 +36,7 @@ function subnetting_16 {
 
 
 #method for: 192.168.1.#
-
 function subnetting_24 {
-	
 	echo
 	NEW_SUB=$(echo $SUBNET | cut -d'.' -f"1,2,3")
 	
@@ -62,7 +58,6 @@ function subnetting_24 {
 
 
 # Checking if the Alive_IPs or Dead_IPs files exists
-
 if [ -e Alive_IPs ] || [ -e Dead_IPs ]
 then
 	rm Alive_IPS 2>/dev/null
@@ -76,13 +71,13 @@ fi
 echo
 echo '[>] Processing...'
 
-# Checking which method to use
 
+# Checking which method to use
 if [ $CHECK = '#.#' ]	
 then
 	subnetting_16
 else
-	# Confiming /24
+	# Confirming/24
 	CHECK=$(echo $SUBNET | cut -d'.' -f'4')
 	if [ $CHECK = '#' ]
 	then
@@ -96,4 +91,3 @@ fi
 
 
 echo '[+] DONE!'
-
