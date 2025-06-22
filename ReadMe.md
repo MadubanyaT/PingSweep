@@ -1,3 +1,9 @@
-# PING SWEEP
+# PING SWEEP - Bash Script Tool
 
-This is bash script allows the user to ping IP address ranges to check which IP addresses are Alive and stores them in a file.
+Ping Sweep is a simple Bash script that automates the process of scanning a range of IP addresses to identify which ones are alive (responsive). Instead of manually pinging each address, users can input a starting and ending IP range, and the script will do the rest — saving all live IPs into an output file for later use.
+
+## 🛠 Features:
+- Accepts custom IP range input.
+- Automatically pings each IP within the range.
+- Saves reachable and unreachable IP addresses to a file.
+- Lightweight and easy to use.
