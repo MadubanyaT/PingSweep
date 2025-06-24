@@ -7,4 +7,4 @@ Ping Sweep is a simple Bash script that automates the process of scanning a rang
 - Automatically pings each IP within the range.
 - Saves reachable and unreachable IP addresses to a file.
 - Lightweight and easy to use.
-- Add and removes previous stored IPs (You don't have to worry about deleting files (Alive_IPs/Dead_IPs))
+- Adds and removes previous stored IPs (You don't have to worry about deleting files (Alive_IPs/Dead_IPs))
